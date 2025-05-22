@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanta Background</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden; /* Prevent scrolling */
+    }
+
+    #vanta-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Vanta.js background container -->
+  <div id="vanta-bg"></div>
+
+  <script>
+    // Initialize Vanta.js effect
+    VANTA.WAVES({
+      el: "#vanta-bg", // Target the div with id "vanta-bg"
+      color: 0x1e90ff, // Customize the color
+      shininess: 50,   // Adjust shininess
+      waveHeight: 20,  // Adjust wave height
+      waveSpeed: 1     // Adjust wave speed
+    });
+  </script>
+</body>
+</html>
