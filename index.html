@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body >
-    <div  class="desktop"  >
+    <div  class="desktop" id="div"  >
       <div id="div">
         
       <div class="div" id="div">
-        <div class="overlap" >
+        <div class="overlap" id="div" >
           <img class="grey-background" src="https://c.animaapp.com/mazhr0yrKVUFIn/img/grey-background.svg" />
           
           <p class="text-wrapper">
@@ -71,10 +71,9 @@
           </p>
           <div class="text-wrapper-16">DAY #2</div>
           <p class="text-wrapper-17">
-            On day two, I started to design my thought process for my design was that I would create a website page and
-            turn it into what I was planning on doing and having the pictures and background be an animation so there
-            would be shown progress of what ive done and what I have learn and so I just need the lay out of all the
-            days and then I will be able to update down the line
+            On day one of week two, I started to work on teh slide presentation for the SMART Goals and I continued to work on the
+            background and the animation. I was able to slowly start to understand the code and there was a lot of things i till need to work on.
+            The slide show is coming along and the animation is not working as well as I would like it to. I'll still need to work on both tommorow.
           </p>
           <div class="text-wrapper-18">DAY #1</div>
           <div class="text-wrapper-19">WEEK #2</div>
@@ -205,7 +204,7 @@ VANTA.FOG({
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
-  minHeight: 200.00,
+  minHeight: 5050.00,
   minWidth: 200.00,
   highlightColor: 0xd0981,
   midtoneColor: 0x86016,
@@ -214,8 +213,23 @@ VANTA.FOG({
   blurFactor: 0.62,
   speed: 3.50,
   zoom: 1.90
-  
+
 })
+VANTA.FOG({
+    el: "#your-background-element", // Parent element
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0xd0981,
+    midtoneColor: 0x86016,
+    lowlightColor: 0x81860c,
+    baseColor: 0x0,
+    blurFactor: 0.62,
+    speed: 3.50,
+    zoom: 1.90
+});
 </script>
     <script src="script.js"></script>
   </body>
