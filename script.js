@@ -47,4 +47,17 @@ function smoothScroll(target, duration) {
       });
     });
   });
-  
+  //media queries
+  const mq = window.matchMedia("(max-width: 768px)");
+
+function handleWidthChange(e) {
+  if (e.matches) {
+    console.log("Viewport is 768px or smaller");
+    // Optional: apply JS-based style changes or logic
+  } else {
+    console.log("Viewport is wider than 768px");
+  }
+}
+
+mq.addEventListener("change", handleWidthChange);
+handleWidthChange(mq); // Call once on load
