@@ -61,3 +61,25 @@ function handleWidthChange(e) {
 
 mq.addEventListener("change", handleWidthChange);
 handleWidthChange(mq); // Call once on load
+
+//midea queries //
+function adjustLayout() {
+  const width = window.innerWidth;
+
+  if (width < 600) {
+    console.log("Mobile screen detected");
+    document.body.style.backgroundColor = "#f0f0f0";
+  } else if (width >= 600 && width <= 1024) {
+    console.log("Tablet screen detected");
+    document.body.style.backgroundColor = "#e0e0e0";
+  } else {
+    console.log("Desktop screen detected");
+    document.body.style.backgroundColor = "#d0d0d0";
+  }
+}
+
+// Run on page load
+adjustLayout();
+
+// Run on window resize
+window.addEventListener("resize", adjustLayout);

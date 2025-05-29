@@ -1,38 +1,82 @@
 /*media queries*/
-@media screen and (min-width: 480px) {
-  #leftsidebar {width: 200px; float: left;}
-  #main {margin-left: 216px;}
+/* Base styles (default for desktop) */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
-.text-block {
-  font-size: 14px;
-  line-height: 1.5;
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
-.image-block {
-  width: 100%;
-  height: auto;
+.text-wrapper {
+  font-size: 18px;
+  margin: 20px;
 }
-@media (min-width: 600px) {
+
+/* Tablet styles (600px to 1024px) */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
   body {
+    font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px;
+  }
+
+  .text-wrapper {
     font-size: 16px;
-  }
-
-  .text-block {
-    font-size: 18px;
+    margin: 15px;
   }
 }
-@media (min-width: 1024px) {
+
+/* Mobile styles (less than 600px) */
+@media screen and (max-width: 599px) {
   body {
-    font-size: 18px;
+    font-size: 12px;
   }
 
-  .text-block {
-    font-size: 20px;
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px;
+  }
+
+  .text-wrapper {
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  img {
+    max-width: 100%; /* Make images responsive */
+    height: auto;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 20px;
+}
+
+.item {
+  flex: 1 1 calc(33.33% - 20px); /* Adjust width dynamically */
+}
+
+@media screen and (max-width: 1024px) {
+  .item {
+    flex: 1 1 calc(50% - 20px); /* Adjust width for tablets */
   }
 }
 
+@media screen and (max-width: 599px) {
+  .item {
+    flex: 1 1 100%; /* Full width for mobile */
+  }
+}
 
 /*vanta.fog*/
 
@@ -48,6 +92,12 @@
   height: 100%;
 }
 
+#div{
+  
+  width: 1440px;
+  height: 3205px;
+ 
+}
 
 
 .desktop .div {
